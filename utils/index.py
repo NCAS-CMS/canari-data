@@ -29,6 +29,26 @@ def get_cell_methods(f):
     else:
         return f.cell_methods()
 
+def name_match(f, key):
+    """ For key = "standard_name:long_name" return true 
+            if f.standard_name == standard_name and f.long_name == long_name
+    """
+    try:
+        standard, long = tuple(key.split(':'))
+    except:
+        return False
+    if standard in ["","None"]:
+        standard = None
+    if long in ["","None"]:
+        return long
+    if getattr(f,'standard_name',None) != standard:
+        return False
+    if getattr(f,'long_name', None) != long:
+        return False
+    return True
+
+
+
 class CFIndex:
 
     def __init__(self, dirname, 
@@ -36,7 +56,8 @@ class CFIndex:
                     duplicate_logfile=None, 
                     namechecks=None,
                     standard_and_long=None,
-                    index_file='cfindex.json'):
+                    index_file='cfindex.json',
+                    force_rebuild=False):
         """ 
         Index all the files in a directory <dirname> by their standard names and long names
         so that all files associated with <standard_name>:<long_name> are listed in 
@@ -51,6 +72,7 @@ class CFIndex:
 
             index.volume()
 
+            flds = index.get_fields('air_temperature:some_funny_long_name)
 
         There are a bunch of additional checks that are done during indexing, and logs
         are created for those if logfile names are provided.
@@ -59,30 +81,34 @@ class CFIndex:
 
         # persisted
         self._indexed_by_name = {}
-        self._files={}
-        self._fields_by_domain = {}
+        self._files = {}
+        self.dirname = dirname
         
+
         # not persisted
         self._duplicate_check = {}
         self._name_checks={}
         self._long_names=[]
+        self._fields_by_domain = {}
   
         # and we're off:
 
         path=Path(dirname)
         self.index_file = path/index_file
         last_updated = path.stat().st_mtime
-
         files = path.glob('*.nc')
+
+
         reindex = True
-        if self.index_file.exists():
-            if self.index_file.stat().st_mtime  > last_updated:
-                reindex=False
-            revisit = []
-            if check_file_times:
-                for file in files: 
-                    if file.stat().m_time > last_updated:
-                        revisit.append(file)
+        if not force_rebuild: 
+            if self.index_file.exists():
+                if self.index_file.stat().st_mtime  > last_updated:
+                    reindex=False
+                revisit = []
+                if check_file_times:
+                    for file in files: 
+                        if file.stat().m_time > last_updated:
+                            revisit.append(file)
 
         if not reindex and revisit != []:
             # reload and get all the good stuff from the last index
@@ -173,6 +199,7 @@ class CFIndex:
                 x = json.load(f)
                 self._indexed_by_name = x['index']
                 self._files = x['files']
+                self.dirname = x['dirname']
 
     def volume(self,months=12,simulations=40,years=150, scalefactor=None, units=1e9):
         """ Return expected volumes in GB
@@ -195,7 +222,7 @@ class CFIndex:
 
     def save(self):
         with open(self.index_file,'w') as f:
-            json.dump({'index':self._indexed_by_name,'files':self._files},f)
+            json.dump({'index':self._indexed_by_name,'files':self._files,'dirname':self.dirname},f)
 
     def _domain_summary(self,f):
         """ For a given domain, get a domain summary """
@@ -209,10 +236,15 @@ class CFIndex:
     def __getitem__(self, key):
         return self._indexed_by_name[key]
 
-    def get_fields(self, key, directory='/'):
-        """ Return the fields corresponding to the key"""
+    def get_fields(self, key, time_domain=None):
+        """ 
+        Return the fields corresponding to the key, and potentially a specific form of time averaging
+        """
+        if time_domain is not None:
+            raise NotImplementedError
         file_keys = self[key]
-        fields = cf.read([Path(directory)/f for f in file_keys])
+        fields = cf.read([Path(self.dirname)/f for f in file_keys])
+        fields = [f for f in fields if name_match(f, key)]
         return fields
 
 class TestCFIndex(unittest.TestCase):
