@@ -1,33 +1,16 @@
 import cf
+
 from pathlib import Path
 from datetime import datetime, timezone
 from itertools import islice
 import json
 import unittest
 
-from serialise_cf import serialise
+from domain_handling import DomainSummary 
 
 def nice_time(timestamp):
     return  datetime.fromtimestamp(timestamp, tz=timezone.utc)
 
-def get_cell_methods(f):
-    """ 
-    Extract what we need to know about cell methods
-    """
-    if cf.__version__ < '3.14.0':
-        cmset = f.cell_methods()
-        try:
-            for k,cm in cmset.items():
-                cms = str(cm)
-                axes = f.coordinates(filter_by_axis=cm.axes)
-                for i, kk in enumerate(axes):
-                    sname = getattr(axes[kk],'standard_name',"")
-                    cms = cms.replace(cm.axes[i],sname)
-                return cms
-        except Exception as err:
-            return cms
-    else:
-        return f.cell_methods()
 
 def name_match(f, key):
     """ For key = "standard_name:long_name" return true 
@@ -46,7 +29,6 @@ def name_match(f, key):
     if getattr(f,'long_name', None) != long:
         return False
     return True
-
 
 
 class CFIndex:
@@ -155,7 +137,7 @@ class CFIndex:
                                     pass
                         else:
                             self._name_checks[std_name] = long_name
-                    key = id, self._domain_summary(ff)
+                    key = id, str(DomainSummary(ff)) 
                     if std_name is not None and long_name is not None:
                         self._long_names.append([std_name, long_name, key, ff.units])
                     if key in self._duplicate_check:
@@ -224,14 +206,6 @@ class CFIndex:
         with open(self.index_file,'w') as f:
             json.dump({'index':self._indexed_by_name,'files':self._files,'dirname':self.dirname},f)
 
-    def _domain_summary(self,f):
-        """ For a given domain, get a domain summary """
-        #FIXME: should be outer edge of bounds, and I am not sure about the coords and ancils, is that sufficient?
-        coords = [serialise(cf.Data.concatenate([b.min(), b.max()])) for b in [a.data for k,a in f.domain.dimension_coordinates().items()]]
-        ancils = [serialise(cf.Data.concatenate([b.min(), b.max()])) for b in [a.data for k,a in f.domain.auxiliary_coordinates().items()]] 
-        bbox = coords+ancils
-        methods = get_cell_methods(f)
-        return json.dumps({'bbox':bbox, 'methods':methods})
         
     def __getitem__(self, key):
         return self._indexed_by_name[key]
