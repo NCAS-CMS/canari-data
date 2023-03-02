@@ -38,10 +38,10 @@ We need an additional four simulations to provide initial conditions from differ
 
 | Variant Label | Parent | InitialisationRealisation Index | RealisationI Index | Notes |
 | -- | -- | -- | -- | -- |
-| r21i5f1p2 | CMIP6.CMIP.MOHC.HadGEM3-GC31-MM.piControl.r1i1p1f1 | 5 | 21 | Just the one run but check ocean state at start |
-| r26i6f1p2 | CMIP6.CMIP.MOHC.HadGEM3-GC31-MM.piControl.r1i1p1f1 | 6 | 26 | Just the one run but check ocean state at start |
-| r31i7f1p2 | CMIP6.CMIP.MOHC.HadGEM3-GC31-MM.piControl.r1i1p1f1 | 7 | 31 | Just the one run but check ocean state at start|
-| r36i8f1p2 | CMIP6.CMIP.MOHC.HadGEM3-GC31-MM.piControl.r1i1p1f1 | 8 | 36 | Just the one run but check ocean state at start|
+| r21i5f1p1 | CMIP6.CMIP.MOHC.HadGEM3-GC31-MM.piControl.r1i1p1f1 | 5 | 21 | Just the one run but check ocean state at start |
+| r26i6f1p1 | CMIP6.CMIP.MOHC.HadGEM3-GC31-MM.piControl.r1i1p1f1 | 6 | 26 | Just the one run but check ocean state at start |
+| r31i7f1p1 | CMIP6.CMIP.MOHC.HadGEM3-GC31-MM.piControl.r1i1p1f1 | 7 | 31 | Just the one run but check ocean state at start|
+| r36i8f1p1 | CMIP6.CMIP.MOHC.HadGEM3-GC31-MM.piControl.r1i1p1f1 | 8 | 36 | Just the one run but check ocean state at start|
 
 #### Second Tranch - Core
 
@@ -52,10 +52,10 @@ These are then continued by another set of runs, the second tranch core-set
 
 | Variant Label | Parent | InitialisationRealisation Index | RealisationI Index | Notes |
 | -- | -- | -- | -- | -- |
-| r21i5f1p2 | CMIP6.CMIP.MOHC.HadGEM3-GC31-MM.piControl.r1i1p1f1 | 5 | 21 | Continues without perturbation |
-| r26i6f1p2 | CMIP6.CMIP.MOHC.HadGEM3-GC31-MM.piControl.r1i1p1f1 | 6 | 26 | Continues without perturbation |
-| r31i7f1p2 | CMIP6.CMIP.MOHC.HadGEM3-GC31-MM.piControl.r1i1p1f1 | 7 | 31 | Continues without perturbation |
-| r36i8f1p2 | CMIP6.CMIP.MOHC.HadGEM3-GC31-MM.piControl.r1i1p1f1 | 8 | 36 | Continues without perturbation |
+| r21i5f1p2 | CANARI-LE.NCAS.HadGEM3-GC31-MM.hist1.r#i5f1p1 | 5 | 21 | Continues without perturbation |
+| r26i6f1p2 | CANARI-LE.NCAS.HadGEM3-GC31-MM.hist1.r#i6f1p1 | 6 | 26 | Continues without perturbation |
+| r31i7f1p2 | CANARI-LE.NCAS.HadGEM3-GC31-MM.hist1.r#i7f1p1 | 7 | 31 | Continues without perturbation |
+| r36i8f1p2 | CANARI-LE.NCAS.HadGEM3-GC31-MM.hist1.r#i8f1p1 | 8 | 36 | Continues without perturbation |
 
 
 #### Second Tranch - Perturbed
