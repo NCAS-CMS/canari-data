@@ -11,6 +11,8 @@ Meanwhile, [this](https://docs.google.com/document/d/1oYErv41Ai5535LMHfU5wCUTFEn
 
 (Reinhard to add text and edit the table, in particular to replace the "relevant CMIP6 DRS-ID with the appropriate hist run)
 
+
+#### First Tranch
 We will be doing the following HIST runs from 1950, with SSP370 continuation
 - there are two parent/child relationships here (CMIP6 HIST -> CANARI HIST and CANARI HIST -> SSP370)
 
@@ -20,6 +22,8 @@ We will be doing the following HIST runs from 1950, with SSP370 continuation
 | r2i-f1p1 | Relevant CMIP6 HIST DRS-ID | 2 | 6-10 | Five variants iniitialised by perturbing initial atmosphere | 
 | r3i-f1p1 | Relevant CMIP6 HIST DRS-ID | 3 | 11-15 | Five variants iniitialised by perturbing initial atmosphere | 
 | r4i-f1p1 | Relevant CMIP6 HIST DRS-ID | 4 | 16-20 | Five variants iniitialised by perturbing initial atmosphere | 
+
+#### Macro Tranch
 
 We will be doing the following HIST runs from 1850, with SSP370 continuation
 - these runs are initialised from PICONTROL at 30 year intervals
@@ -34,8 +38,12 @@ We will be doing the following HIST runs from 1850, with SSP370 continuation
 | r7i23f1p1 | Relevant CMIP6 PICONTROL DRS-ID | 7 | 23 | Just the one variant, but three logical components|
 | r8i24f1p1 | Relevant CMIP6 PICONTROL DRS-ID | 8 | 24 | Just the one variant,  but three logical components|
 
+
+#### Second Tranch
+
 We will be doing an additional set of HIST runs from 1950, with SSSP370 continuation:
 - there are two parent/child relationships here (CANARI HIST -> CANARI HIST and CANARI HIST -> SSP370)
+- can start when the macro tranch has got to 1950 _and_ verified to have sufficiently different ocean states
 
 | Variant Label | Macro Parent | Realisation Index | Initialisation Index | Notes |
 | -- | -- | -- | -- | -- |
