@@ -38,10 +38,10 @@ We need an additional four simulations to provide initial conditions from differ
 
 | Variant Label | Parent | InitialisationRealisation Index | RealisationI Index | Notes |
 | -- | -- | -- | -- | -- |
-| r21i5f1p2 | CMIP6.CMIP.MOHC.HadGEM3-GC31-MM.piControl.r1i1p1f1 | 5 | 21 | Just the one variant, but three logical components |
-| r26i6f1p2 | CMIP6.CMIP.MOHC.HadGEM3-GC31-MM.piControl.r1i1p1f1 | 6 | 26 | Just the one variant, but three logical components |
-| r31i7f1p2 | CMIP6.CMIP.MOHC.HadGEM3-GC31-MM.piControl.r1i1p1f1 | 7 | 31 | Just the one variant, but three logical components|
-| r36i8f1p2 | CMIP6.CMIP.MOHC.HadGEM3-GC31-MM.piControl.r1i1p1f1 | 8 | 36 | Just the one variant,  but three logical components|
+| r21i5f1p2 | CMIP6.CMIP.MOHC.HadGEM3-GC31-MM.piControl.r1i1p1f1 | 5 | 21 | Just the one run but check ocean state at start |
+| r26i6f1p2 | CMIP6.CMIP.MOHC.HadGEM3-GC31-MM.piControl.r1i1p1f1 | 6 | 26 | Just the one run but check ocean state at start |
+| r31i7f1p2 | CMIP6.CMIP.MOHC.HadGEM3-GC31-MM.piControl.r1i1p1f1 | 7 | 31 | Just the one run but check ocean state at start|
+| r36i8f1p2 | CMIP6.CMIP.MOHC.HadGEM3-GC31-MM.piControl.r1i1p1f1 | 8 | 36 | Just the one run but check ocean state at start|
 
 #### Second Tranch - Core
 
