@@ -68,10 +68,10 @@ We will be doing an additional set of HIST runs from 1950, with SSSP370 continua
 
 | Variant Label | Macro Parent | Initialisation Index | Realisation Index | Notes |
 | -- | -- | -- | -- | -- |
-| r#i5f1p2 | CANARI-LE/HIST/r#i5f1p2 | 5 | 22-25 | Four variants iniitialised by perturbing initial atmosphere | 
-| r#i61p2 | CANARI-LE/HIST/r#i6f1p2 | 6 | 27-30  | Four variants iniitialised by perturbing initial atmosphere | 
-| r#i7f1p2 | CANARI-LE/HIST/r#i7f1p2 | 7 | 32-35 | Four variants iniitialised by perturbing initial atmosphere | 
-| r#i8f1p2 | CANARI-LE/HIST/r#i8f1p2 | 8 | 37-40 | Four variants iniitialised by perturbing initial atmosphere | 
+| r#i5f1p2 | CANARI-LE/HIST1/r#i5f1p2 | 5 | 22-25 | Four variants iniitialised by perturbing initial atmosphere | 
+| r#i61p2 | CANARI-LE/HIST1/r#i6f1p2 | 6 | 27-30  | Four variants iniitialised by perturbing initial atmosphere | 
+| r#i7f1p2 | CANARI-LE/HIST1/r#i7f1p2 | 7 | 32-35 | Four variants iniitialised by perturbing initial atmosphere | 
+| r#i8f1p2 | CANARI-LE/HIST1/r#i8f1p2 | 8 | 37-40 | Four variants iniitialised by perturbing initial atmosphere | 
 
 
 
