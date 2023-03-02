@@ -20,7 +20,7 @@ We will be doing the following HIST runs from 1950, with SSP370 continuation to 
 - (note that the hash in the variant labels should be replaced by the realization index)
 - note that P2 is used because we have the corrected ozone runs so this isn't quite vanilla HadGEM3-GC31.
 
-| Variant Label | Macro Parent | Initialisation Index | Realiisation Index | Notes |
+| Variant Label | Parent | Initialisation Index | Realiisation Index | Notes |
 | -- | -- | -- | -- | -- |
 | r#i1f1p2 | CMIP6.CMIP.MOHC.HadGEM3-GC31-MM.historical.r1i1p1f3 | 1 | 1-5 | Five variants iniitialised by perturbing initial atmosphere | 
 | r#i2f1p2 | CMIP6.CMIP.MOHC.HadGEM3-GC31-MM.historical.r2i1p1f3 | 2 | 6-10 | Five variants iniitialised by perturbing initial atmosphere | 
@@ -36,7 +36,7 @@ We need an additional four simulations to provide initial conditions from differ
 - Note that these ones, unlike all the other ones, will have a different branch time in the child than in the parent, the children start date will always be 1850 the parent start date will be whatever is selected.
 - Note that these should be stored as HIST1, which is a variant of the CMIP HIST run, which differs only in the duration.
 
-| Variant Label | Macro Parent | InitialisationRealisation Index | RealisationI Index | Notes |
+| Variant Label | Parent | InitialisationRealisation Index | RealisationI Index | Notes |
 | -- | -- | -- | -- | -- |
 | r21i5f1p2 | CMIP6.CMIP.MOHC.HadGEM3-GC31-MM.piControl.r1i1p1f1 | 5 | 21 | Just the one variant, but three logical components |
 | r26i6f1p2 | CMIP6.CMIP.MOHC.HadGEM3-GC31-MM.piControl.r1i1p1f1 | 6 | 26 | Just the one variant, but three logical components |
@@ -50,7 +50,7 @@ These are then continued by another set of runs, the second tranch core-set
 - branch method = continuation
 - can start when a) the macro parent is finishd, and b) checked to have a different state
 
-| Variant Label | Macro Parent | InitialisationRealisation Index | RealisationI Index | Notes |
+| Variant Label | Parent | InitialisationRealisation Index | RealisationI Index | Notes |
 | -- | -- | -- | -- | -- |
 | r21i5f1p2 | CMIP6.CMIP.MOHC.HadGEM3-GC31-MM.piControl.r1i1p1f1 | 5 | 21 | Continues without perturbation |
 | r26i6f1p2 | CMIP6.CMIP.MOHC.HadGEM3-GC31-MM.piControl.r1i1p1f1 | 6 | 26 | Continues without perturbation |
@@ -66,12 +66,12 @@ We will be doing an additional set of HIST runs from 1950, with SSSP370 continua
 - branch method for the first set:  "micro perturbed atmosphere initialisation"; "continuation" for the second set
 - can start when a) the macro parent is finishd, and b) checked to have a different state
 
-| Variant Label | Macro Parent | Initialisation Index | Realisation Index | Notes |
+| Variant Label | Parent | Initialisation Index | Realisation Index | Notes |
 | -- | -- | -- | -- | -- |
-| r#i5f1p2 | CANARI-LE/HIST1/r#i5f1p2 | 5 | 22-25 | Four variants iniitialised by perturbing initial atmosphere | 
-| r#i61p2 | CANARI-LE/HIST1/r#i6f1p2 | 6 | 27-30  | Four variants iniitialised by perturbing initial atmosphere | 
-| r#i7f1p2 | CANARI-LE/HIST1/r#i7f1p2 | 7 | 32-35 | Four variants iniitialised by perturbing initial atmosphere | 
-| r#i8f1p2 | CANARI-LE/HIST1/r#i8f1p2 | 8 | 37-40 | Four variants iniitialised by perturbing initial atmosphere | 
+| r#i5f1p2 | CANARI-LE.NCAS.HadGEM3-GC31-MM.hist1.r#i5f1p2 | 5 | 22-25 | Four variants iniitialised by perturbing initial atmosphere | 
+| r#i61p2 | CANARI-LE.NCAS.HadGEM3-GC31-MM.hist1.r#i6f1p2 | 6 | 27-30  | Four variants iniitialised by perturbing initial atmosphere | 
+| r#i7f1p2 | CANARI-LE.NCAS.HadGEM3-GC31-MM.hist1.r#i7f1p2 | 7 | 32-35 | Four variants iniitialised by perturbing initial atmosphere | 
+| r#i8f1p2 | CANARI-LE.NCAS.HadGEM3-GC31-MM.hist11.r#i8f1p2 | 8 | 37-40 | Four variants iniitialised by perturbing initial atmosphere | 
 
 
 
