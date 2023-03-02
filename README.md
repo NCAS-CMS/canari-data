@@ -25,18 +25,18 @@ We will be doing the following HIST runs from 1950, with SSP370 continuation
 
 #### Macro Tranch
 
-We will be doing the following HIST runs from 1850, with SSP370 continuation
-- these runs are initialised from PICONTROL at 30 year intervals
+We will be doing the following HIST runs from 1850-1949, with 5 1950-2014 (HIST) and 2015-2100 (SSP370) continuations for each
+- these runs are initialised from PICONTROL at 50 year intervals
 - there are three parent/child relationships here (PICONTROL -> CANARI HIST, CANARI HIST -> CANARI HIST, and CANARI HIST -> SSP370)
 - (or not, we need to discuss the nomenclature)
 - Note that these ones, unlike the other ones, will have a different branch time in the child than in the parent!
 
 | Variant Label | Macro Parent | Realisation Index | Initialisation Index | Notes |
 | -- | -- | -- | -- | -- |
-| r5i21f1p1 | Relevant CMIP6 PICONTROL DRS-ID | 5 | 21 | Just the one variant, but three logical components |
-| r6i22f1p1 | Relevant CMIP6 PICONTROL DRS-ID | 6 | 22 | Just the one variant, but three logical components |
-| r7i23f1p1 | Relevant CMIP6 PICONTROL DRS-ID | 7 | 23 | Just the one variant, but three logical components|
-| r8i24f1p1 | Relevant CMIP6 PICONTROL DRS-ID | 8 | 24 | Just the one variant,  but three logical components|
+| r5i21f1p1 | CMIP6.CMIP.MOHC.HadGEM3-GC31-MM.piControl.r1i1p1f1 | 5 | 21 | Just the one variant, but three logical components |
+| r6i22f1p1 | CMIP6.CMIP.MOHC.HadGEM3-GC31-MM.piControl.r1i1p1f1 | 6 | 22 | Just the one variant, but three logical components |
+| r7i23f1p1 | CMIP6.CMIP.MOHC.HadGEM3-GC31-MM.piControl.r1i1p1f1 | 7 | 23 | Just the one variant, but three logical components|
+| r8i24f1p1 | CMIP6.CMIP.MOHC.HadGEM3-GC31-MM.piControl.r1i1p1f1 | 8 | 24 | Just the one variant,  but three logical components|
 
 
 #### Second Tranch
