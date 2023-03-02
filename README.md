@@ -18,10 +18,10 @@ We will be doing the following HIST runs from 1950, with SSP370 continuation
 
 | Variant Label | Macro Parent | Realisation Index | Initialisation Index | Notes |
 | -- | -- | -- | -- | -- |
-| r1i-f1p1 | Relevant CMIP6 HIST DRS-ID | 1 | 1-5 | Five variants iniitialised by perturbing initial atmosphere | 
-| r2i-f1p1 | Relevant CMIP6 HIST DRS-ID | 2 | 6-10 | Five variants iniitialised by perturbing initial atmosphere | 
-| r3i-f1p1 | Relevant CMIP6 HIST DRS-ID | 3 | 11-15 | Five variants iniitialised by perturbing initial atmosphere | 
-| r4i-f1p1 | Relevant CMIP6 HIST DRS-ID | 4 | 16-20 | Five variants iniitialised by perturbing initial atmosphere | 
+| r1i-f1p1 | CMIP6.CMIP.MOHC.HadGEM3-GC31-MM.historical.r1i1p1f3 | 1 | 1-5 | Five variants iniitialised by perturbing initial atmosphere | 
+| r2i-f1p1 | CMIP6.CMIP.MOHC.HadGEM3-GC31-MM.historical.r2i1p1f3 | 2 | 6-10 | Five variants iniitialised by perturbing initial atmosphere | 
+| r3i-f1p1 | CMIP6.CMIP.MOHC.HadGEM3-GC31-MM.historical.r3i1p1f3 | 3 | 11-15 | Five variants iniitialised by perturbing initial atmosphere | 
+| r4i-f1p1 | CMIP6.CMIP.MOHC.HadGEM3-GC31-MM.historical.r4i1p1f3 | 4 | 16-20 | Five variants iniitialised by perturbing initial atmosphere | 
 
 #### Macro Tranch
 
