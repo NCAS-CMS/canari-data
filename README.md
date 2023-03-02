@@ -25,6 +25,7 @@ We will be doing the following HIST runs from 1850, with SSP370 continuation
 - these runs are initialised from PICONTROL at 30 year intervals
 - there are three parent/child relationships here (PICONTROL -> CANARI HIST, CANARI HIST -> CANARI HIST, and CANARI HIST -> SSP370)
 - (or not, we need to discuss the nomenclature)
+- Note that these ones, unlike the other ones, will have a different branch time in the child than in the parent!
 
 | Variant Label | Macro Parent | Realisation Index | Initialisation Index | Notes |
 | -- | -- | -- | -- | -- |
