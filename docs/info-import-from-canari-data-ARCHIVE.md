@@ -1,3 +1,8 @@
+<div style="background-color: #ddf4ff; border: 1px solid #54aeff; border-radius: 6px; padding: 16px; margin-bottom: 16px; color: #1f2328;">
+  <strong>ℹ️ Imported File</strong><br>
+  This file was imported from <a href="https://github.com/NCAS-CMS/canari-data-ARCHIVE/blob/618244ec73ea5b7d7979290c0051125cf7b2ea15/canari-data/README.md" style="color: #0969da;">https://github.com/NCAS-CMS/canari-data-ARCHIVE/</a>
+</div>
+
 # canari-data
 Documents and code for canari data management
 
