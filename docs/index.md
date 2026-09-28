@@ -14,8 +14,7 @@ The available priority variables are listed [here](/metadata/20240303-canari-le-
   - priority NEMO variables ("Priority 1" monthly and 2D daily only), and
   - priority CICE variables (all CICE output is included in the priority output).
 
-**Note:** an unfortunate change in the names of four variables occurred during the HIST2 runs. The spreadsheet referenced above details the variable naming for the currently extracted ensemble members and indicates where the names switch. Variable naming is consistent within an ensmeble member.
-
+**Note:** an unfortunate change in the names of four variables occurred during the HIST2 runs. The spreadsheet referenced above details the variable naming for the currently extracted ensemble members and indicates where the names switch. Variable naming is consistent within an ensemble member.
 
 Alongside the `priority` directory, derived diagnostics are shared by the CANARI community, and you are encouraged to share your own in an appropriate location, e.g., adding to `/gws/ssde/j25b/canari/shared/large-ensemble/derived`. Management of this shared space is very light-touch, and **different users can write** to it, so please make sure you either keep a private copy of your data for small datasets, or that you can easily reproduce these derived diagnostics should the need arise.
 
@@ -28,6 +27,10 @@ Variables not contained in the priority output can be retrieved from the JASMIN 
 ### Ancillary files
 
 Commonly used ancillary files, such as for the land fraction and orography, are available at `/gws/ssde/j25b/shared/large-ensemble/ancil`.
+
+### Regional simulations
+
+For information on the CANARI regional storm simulations, see [here](regmod/index.md).
 
 ## CANARI SSP3-7.0 Production Suites
 
@@ -63,7 +66,8 @@ Commonly used ancillary files, such as for the land fraction and orography, are 
 | [09 - u-cw342](hist2/9-cw342) |  [19 - u-cy880](hist2/19-cy880) | [29 - u-db304](hist2/29-db304) | [39 - u-dd441](hist2/39-dd441) |
 | [10 - u-cw343](hist2/10-cw343) | [20 - u-cy881](hist2/20-cy881) | [30 - u-db305](hist2/30-db305) | [40 - u-dd442](hist2/40-dd442) |
 
-####  Abandoned Suites:
+### Abandoned Suites:
+
 * [03 - u-cv608](hist2/3-cv608)
 * [04 - u-cv830](hist2/4-cv830)
 * [07 - u-cw083](hist2/7-cw083)
